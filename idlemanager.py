@@ -3,13 +3,25 @@ import random
 firstName = ["Haruto","Riku","Haru","Hinata","Sora"]
 lastName = ["Saito","Kobayashi","Nakamura","Yamamoto","Ito"]
 
+def old_options():    
+    select = int(input("\nOption number:"))
+    if(select == 0):
+        print("Looks like your dreams of being an\nIdol manager are over eh?")
+        keepGoing = False
+    if(select == 1):
+        bla.energy = bla.energy + random.randint(1,2)    
+    if(select == 2):
+        if(bla.energy>0):
+            bla.energy = bla.energy - 1
+            bla.talent = trainingDay(bla.talent)
+        if(bla.energy<0):
+            print("You dont have enough energy")
+
+
 def trainingDay(talent):
     print("\nTime For Some Training\n")
     talent = talent + random.randint(1,4)
     return talent
-    
-
-
     
 class girl(object):
     def NameMaker(name):
@@ -31,18 +43,5 @@ class girl(object):
         self.cuteness = random.randint(1,10)
         self.signed = False
 
-bla = girl()
-  
-    select = int(input("\nOption number:"))
-    if(select == 0):
-        print("Looks like your dreams of being an\nIdol manager are over eh?")
-        keepGoing = False
-    if(select == 1):
-        bla.energy = bla.energy + random.randint(1,2)    
-    if(select == 2):
-        if(bla.energy>0):
-            bla.energy = bla.energy - 1
-            bla.talent = trainingDay(bla.talent)
-        if(bla.energy<0):
-            print("You dont have enough energy")
 
+  
